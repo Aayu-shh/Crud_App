@@ -1,10 +1,10 @@
-const db = require('./database');
+const db = require('./config/database');
 const express = require('express');
 
 const app = express();
 
 app.get ('/', (req, res) => {
-    db.execute('INSERT INTO users(name,email,phone_number) VALUES(?,?,?)', ['Aayush Agrawal', 'agrawal.aayush28@gmail.com', '7894561238'])
+    db.execute('INSERT INTO users(name,email,phone_number) VALUES(?,?,?)', ['Jane Doe', 'jane.doe0707@gmail.com', '9696969696'])
         .then((result,err) => {
             if (!err)
                 console.log("Data Inserted")
