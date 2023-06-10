@@ -1,9 +1,12 @@
 const db = require('./config/database');
 const express = require('express');
 
+const dotenv = require('dotenv');
 const app = express();
 
-app.get ('/', (req, res) => {
+dotenv.config();
+
+app.get('/', (req, res) => {
     db.execute('INSERT INTO users(name,email,phone_number) VALUES(?,?,?)', ['Jane Doe', 'jane.doe0707@gmail.com', '9696969696'])
         .then((result,err) => {
             if (!err)
@@ -13,7 +16,8 @@ app.get ('/', (req, res) => {
     res.send('<h1>Hello World1</h1><hr/>');
 });
 
-app.listen(9090, () => {
-    console.log('listening');
+app.listen(process.env.PORT, (err) => {
+    if(err) console.log(err);
+    else console.log('listening to port '+ process.env.PORT);
 })
 
