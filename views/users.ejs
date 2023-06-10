@@ -13,23 +13,36 @@
 
 <body>
     <div class="container">
-        <h2 class="h3 text-center">User Data</h2><hr>
+        <div class="row">
+            <div class="col col-10">
+                <h2 class="h3 text-center">User Data</h2>
+            </div>
+            <div class="col">
+                <a href="/" class="btn btn-outline-success m-3">ADD USER</a>
+            </div>
+        </div>
+        <hr />
         <div class="row">
             <% if(results.length>0){ %>
                 <% results.forEach(result=>{ %>
                     <div class="col-md-3 col-sm-12 my-1">
                         <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title"><%=result.Name%></h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary"><%=result.Email%></h6>
-                                <p class="card-text"><%=result.Phone_Number%></p>
-                                <a href="/edit/<%=result.id%>" class="card-link">Edit User</a>
-                                <a href="/delete/<%=result.id%>" class="card-link">Delete User</a>
+                            <div class="card-body bg-body-tertiary">
+                                <h5 class="card-title">
+                                    <%=result.Name%>
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    <%=result.Email%>
+                                </h6>
+                                <p class="card-text">
+                                    <%=result.Phone_Number%>
+                                </p>
+                                <a href="/edit/<%=result.id%>" class="btn btn-warning">Edit User</a>
+                                <a href="/delete/<%=result.id%>" class="btn btn-outline-danger">Delete User</a>
                             </div>
                         </div>
                     </div>
                     <%})}%>
-
         </div>
     </div>
 
