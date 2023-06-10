@@ -36,6 +36,13 @@ app.get('/users',(req,res,next)=>{
         }));
 })
 
+app.get('/delete/:uid', (req, res, next) => {
+    let uid = req.params.uid;
+    db.execute('DELETE FROM users WHERE id = ?', [uid])
+        .then(() => res.redirect('/users'))
+        .catch(err => console.log(err));
+})
+
 app.listen(process.env.PORT, (err) => {
     if(err) console.log(err);
     else console.log('listening to port '+ process.env.PORT);
