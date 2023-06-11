@@ -13,21 +13,29 @@
 </head>
 
 <body class="main-body">
-    <h2>ADD USER</h2>
+    <div class="row flex-row">
+        <div class="col-lg-10 col-md-8">
+            <h2>ADD USER</h2>
+        </div>
+        <div class="col">
+            <a href="/users" class="btn btn-info">SHOW USER DATA</a>
+        </div>
+    </div>
     <form action="/users" method="POST" class="main-form">
         <div class="mb-3">
             <label for="name" class="form-label">Name: </label>
-            <input type="text" id="name" name="name" class="form-control">
+            <input type="text" id="name" name="name" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email: </label>
-            <input type="email" id="email" name="email" class="form-control">
+            <input type="email" id="email" name="email" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Phone</label>
-            <input type="tel" id="phone" name="phone" class="form-control"><br><br>
+            <input type="tel" id="phone" name="phone" class="form-control" required><br><br>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </body>
+
 </html>
