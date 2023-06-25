@@ -5,7 +5,7 @@ This repository contains a fullstack application for managing user data with bas
 ## Technologies Used
 
 - FrontEnd: HTML, JavaScript (with EJS) and Bootstrap CSS
-- BackEnd: Node.js
+- BackEnd: Node.js, Express.js
 - Database: MySQL
 
 ## Features
