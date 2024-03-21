@@ -1,4 +1,4 @@
-# User Data CRUD App
+# CRUD App
 
 This repository contains a fullstack application for managing user data with basic CRUD operations.
 
